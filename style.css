@@ -1,0 +1,549 @@
+:root {
+    --primary-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    --blue: #2563eb;
+    --green: #16a34a;
+    --orange: #ea580c;
+    --purple: #9333ea;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color:#f0f0f0;
+    color: #000;
+    line-height: 1.5;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(120, 207, 117, 0.1);
+}
+
+.stat-content {
+    padding: 24px;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon-wrapper.blue { background-color: #dbeafe; color: var(--blue); }
+.icon-wrapper.green { background-color: #dcfce7; color: var(--green); }
+.icon-wrapper.orange { background-color: #ffedd5; color: var(--orange); }
+.icon-wrapper.purple { background-color: #f3e8ff; color: var(--purple); }
+
+.stat-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+
+.number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+.deliveries-section {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    width: 580px;
+}
+
+.deliveries-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.delivery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.delivery-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    background: #E1EDF8;
+    transition: background-color 0.2s ease;
+}
+
+
+.delivery-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.status-icon.delivered { background-color: #dcfce7; color: var(--green); }
+.status-icon.in-transit { background-color: #dbeafe; color: var(--blue); }
+.status-icon.delayed { background-color: #fee2e2; color: #dc2626; }
+
+.tracking-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.tracking-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.delivery-status {
+    text-align: right;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.status.delivered { color: green; }
+.status.in-transit { color: blue; }
+.status.delayed { color: #dc2626; }
+
+.time {
+    font-size: 13px;
+    color: grey;
+}
+
+#deliver {
+    display: flex;
+    width: 1400px;
+    gap: 40px;
+}
+
+#apimage {
+    height: 500px;
+    width: 650px;
+    border-radius: 10px;
+}
+a {
+    text-decoration: none; 
+}
+.deliveries-section {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    width: 580px;
+}
+
+
+
+
+        :root {
+            --primary-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --blue: #2563eb;
+            --green: #16a34a;
+            --orange: #ea580c;
+            --purple: #9333ea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #000;
+            line-height: 1.5;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .back-button {
+            padding: 8px 16px;
+            background-color: #dbeafe;
+            color: var(--blue);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #bfdbfe;
+        }
+
+        .stats-summary {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 24px;
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .stat-item .number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .delivery-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .delivery-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .delivery-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tracking-number {
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .delivery-time {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .delivery-details {
+            margin-bottom: 16px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .detail-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .detail-value {
+            font-weight: 500;
+        }
+
+        .delivery-status {
+           
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .status-in-transit {
+            background-color: #dbeafe;
+            color: var(--blue);
+        }
+
+        .status-loading {
+            background-color: #ffedd5;
+            color: var(--orange);
+        }
+
+        .status-near {
+            background-color: #dcfce7;
+            color: var(--green);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+            }
+
+            .delivery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-summary {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 0 8px;
+            }
+
+            .stats-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .delivery-card {
+                padding: 16px;
+            }
+
+            .delivery-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+
+
+@media screen and (max-width: 1440px) {
+    #deliver {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .deliveries-section {
+        width: calc(50% - 20px);
+        min-width: 300px;
+        flex: 1;
+    }
+
+    #mapping {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    #apimage {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    #deliver {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .deliveries-section {
+        width: 100%;
+    }
+
+    #apimage {
+        height: 400px;
+    }
+
+    .delivery-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .delivery-status {
+        text-align: left;
+        margin-left: 48px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 0 8px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-content {
+        padding: 16px;
+    }
+
+    .deliveries-section {
+        padding: 16px;
+    }
+
+    .delivery-item {
+        padding: 12px;
+    }
+
+    #apimage {
+        height: 300px;
+    }
+
+    .number {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .stat-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .delivery-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .delivery-status {
+        margin-left: 0;
+    }
+}

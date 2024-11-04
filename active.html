@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Deliveries</title>
+    <link rel="stylesheet" href="active.css">
+</head>
+<body>
+    <div class="details-container">
+        <div class="header">
+            
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+        </div>
+        <div class="details-header">
+            <h1 class="details-title">Active Deliveries</h1>
+            <span class="details-count">128 Active</span>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" class="search-input" placeholder="Search by tracking number or location...">
+            <select class="filter-select">
+                <option value="">Filter by Status</option>
+                <option value="in-transit">In Transit</option>
+                <option value="out-for-delivery">Out for Delivery</option>
+                <option value="delayed">Delayed</option>
+            </select>
+        </div>
+
+        <div class="delivery-grid">
+            <div class="delivery-card">
+                <div class="delivery-header">
+                    <span class="tracking-number">TRK-2024-002</span>
+                    <span class="status status-active">In Transit</span>
+                </div>
+                <div class="delivery-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Destination</span>
+                        <span class="detail-value">Kilimani</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">ETA</span>
+                        <span class="detail-value">3h remaining</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Driver</span>
+                        <span class="detail-value">John</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Vehicle</span>
+                        <span class="detail-value">KBZ 123Y</span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

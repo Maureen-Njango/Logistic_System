@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Shipments</title>
+    <link rel="stylesheet" href="active.css">
+</head>
+<body>
+    <div class="details-container">
+        <div class="header">
+            
+            <a href="index.html" class="back-button">← Back to Dashboard</a>
+        </div>
+        <div class="details-header">
+            <h1 class="details-title">Pending Shipments</h1>
+            <span class="details-count">45 Pending</span>
+        </div>
+
+        <div class="search-filter">
+            <input type="text" class="search-input" placeholder="Search by tracking number or location...">
+            <select class="filter-select">
+                <option value="">Filter by Type</option>
+                <option value="processing">Processing</option>
+                <option value="awaiting-pickup">Awaiting Pickup</option>
+                <option value="scheduled">Scheduled</option>
+            </select>
+        </div>
+
+        <div class="delivery-grid">
+            
+            <div class="delivery-card">
+                <div class="delivery-header">
+                    <span class="tracking-number">TRK-2024-045</span>
+                    <span class="status status-pending">Processing</span>
+                </div>
+                <div class="delivery-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Customer</span>
+                        <span class="detail-value">Maureen</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value">Lower Kabete</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Schedule Date</span>
+                        <span class="detail-value">Tomorrow, 10:00 AM</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Package Type</span>
+                        <span class="detail-value">Standard</span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
